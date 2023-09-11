@@ -19,7 +19,7 @@ public class WhenCreatingObjects {
     public void whenADogBarks() {
         Dog fido = new Dog("Fido","Bone", 5);
 
-        String dogSound = "";
+        String dogSound;
         // TODO: implement a method in the Dog sound called makeNoise() that returns the sound a dog makes: "Woof", e.g.
         dogSound = fido.makeNoise();
 
@@ -38,15 +38,24 @@ public class WhenCreatingObjects {
     }
 
     @Test
+    public void creating_a_humster(){
+        Pet hazel = new Hamster("Hazel", 1, "Wheel");
+    }
+
+    @Test
     public void whenAnimalsPlay() {
 // TODO: Uncomment me
-//
-//        Pet fido = new Dog("Fido","Bone", 5);
-//        Pet spot = new Cat("Spot","String", 5);
-//        Pet hazel = new Hamster("Hazel", 1, "Wheel");
-//
-//        assertThat(fido.play(), equalTo("plays with bone"));
-//        assertThat(spot.play(), equalTo("plays with string"));
-//        assertThat(hazel.play(), equalTo("runs in wheel"));
+
+        Pet fido = new Dog("Fido","Bone", 5);
+        Pet spot = new Cat("Spot","String", 5);
+        Pet hazel = new Hamster("Hazel", 1, "Wheel");
+
+        System.out.println("Fido " + fido.play());
+        System.out.println("Spot " + spot.play());
+        System.out.println("Hazel " + hazel.play());
+
+        assertThat(fido.play(), equalTo("plays with bone"));
+        assertThat(spot.play(), equalTo("plays with string"));
+        assertThat(hazel.play(), equalTo("runs in wheel"));
     }
 }
